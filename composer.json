@@ -1,0 +1,17 @@
+{
+    "name": "dementor218/php-oop-learning",
+    "description": "Learning PHP OOP from Junior to Middle",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "e.kuroedov"
+        }
+    ],
+    "require": {}
+}
