@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Week01\Tasks\Task01;
 
 class Circle extends Shape
 {
-    const float PI = 3.14;
-
-    public function __construct (
+    public function __construct(
         protected readonly float $radius
     ){}
 
@@ -19,6 +17,6 @@ class Circle extends Shape
 
     public function area(): float
     {
-        return self::PI * pow($this->getRadius(), 2);
+        return M_PI * $this->getRadius() ** 2;
     }
 }

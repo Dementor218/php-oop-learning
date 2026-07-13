@@ -7,16 +7,16 @@ namespace App\Week01\Tasks\Task01;
 class Square extends Shape
 {
     public function __construct(
-        protected readonly float $width,
+        protected readonly float $side,
     ){}
 
-    public function getWidth(): float
+    public function getSide(): float
     {
-        return $this->width;
+        return $this->side;
     }
 
     public function area(): float
     {
-        return pow($this->width, 2);
+        return $this->side ** 2;
     }
 }
