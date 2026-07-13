@@ -10,9 +10,4 @@ class Car extends Vehicle
     {
         return "Автомобиль";
     }
-
-    public static function createDefault($model, $maxSpeed): static
-    {
-        return new static('Lada Vesta', 180);
-    }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Week01\Day02;
 
-class Vehicle
+abstract class Vehicle
 {
     public function __construct(
         private readonly string $model,
@@ -21,17 +21,11 @@ class Vehicle
         return $this->maxSpeed;
     }
 
-//    public abstract function getType(): string;
+    public abstract function getType(): string;
 
-    public static function createDefault($model, $maxSpeed): static
+    public static function createDefault(string $model, int $maxSpeed): static
     {
         return new static($model, $maxSpeed);
-    }
-
-
-    public static function createDefaultWrong($model, $maxSpeed): self
-    {
-        return new self($model, $maxSpeed);
     }
 
 
