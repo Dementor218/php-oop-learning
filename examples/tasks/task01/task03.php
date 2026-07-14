@@ -12,4 +12,4 @@ $config3 = new Config();
 $config4 = new Config();
 $config5 = new Config();
 
-echo $config5->getCount();
+echo Config::getCount();
