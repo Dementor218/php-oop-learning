@@ -6,8 +6,8 @@ namespace App\Week01\Tasks\Task02;
 
 class Manager extends Employee
 {
-    public function calculateSalary(): float
+    protected function getBonusRate(): float
     {
-        return $this->getSalary() + $this->getSalary() * 0.5;
+        return 0.5;
     }
 }

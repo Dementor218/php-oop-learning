@@ -6,8 +6,9 @@ namespace App\Week01\Tasks\Task02;
 
 class Intern extends Employee
 {
-    public function calculateSalary(): float
+    protected function getBonusRate(): float
     {
-        return $this->getSalary();
+        return 0.0;
     }
+
 }

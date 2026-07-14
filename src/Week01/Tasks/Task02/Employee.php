@@ -21,10 +21,20 @@ abstract class Employee
         return $this->baseSalary;
     }
 
-    public abstract function calculateSalary(): float;
+    abstract protected function getBonusRate(): float;
+
+    public function calculateSalary(): float
+    {
+        return $this->baseSalary * (1 + $this->getBonusRate());
+    }
 
     public function describe(): string
     {
-        return get_class($this) . ': Имя: ' . $this->getName() . ', Зарплата: ' . $this->calculateSalary();
+        return sprintf(
+            '%s: Имя: %s, Зарплата: %.2f',
+            $this::class,
+            $this->name,
+            $this->calculateSalary()
+        );
     }
 }
