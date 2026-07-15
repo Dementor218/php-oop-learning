@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-include __DIR__ . "/../../../vendor/autoload.php";
+require __DIR__ . "/../../../vendor/autoload.php";
 
 use App\Week01\Tasks\Task03\Config;
 
