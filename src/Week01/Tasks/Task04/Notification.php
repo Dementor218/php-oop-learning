@@ -10,6 +10,6 @@ abstract class Notification
 
     public function send(string $message): string
     {
-        return substr($message, 1, static::MAX_LENGTH);
+        return substr($message, 0, static::MAX_LENGTH);
     }
 }
